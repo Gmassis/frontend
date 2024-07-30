@@ -1,0 +1,32 @@
+@mixin horizontal {
+  flex-direction: row;
+  width: 100%;
+  overflow-x: scroll;
+  padding-bottom: 8px;
+  margin-bottom: -8px;
+}
+
+@mixin reset-scroll {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  position: relative;
+  @include horizontal();
+  @include reset-scroll();
+
+  ::ng-deep {
+    & > * {
+      &:last-child {
+        padding-right: 16px;
+      }
+
+      padding-left: 16px;
+    }
+  }
+}

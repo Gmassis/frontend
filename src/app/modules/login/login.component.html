@@ -1,0 +1,50 @@
+<div class="login">
+  <div class="login__header">
+    <div class="login__container-title">
+      <div class="login__icon-arrow" (click)="onClickBack()"></div>
+      <label class="login__title">{{ viewModel.title }}</label>
+    </div>
+  </div>
+  <div class="login__body">
+    <div class="login__image"></div>
+    @if (viewModel.form) {
+    <div class="login__form">
+      <app-input
+        [value]="''"
+        [type]="'email'"
+        [placeholder]="'Enter your email'"
+      ></app-input>
+      @if (viewModel.isSignup) {
+      <app-input
+        [value]="''"
+        [type]="'text'"
+        [placeholder]="'Enter your name'"
+      ></app-input>
+      <app-input
+        [value]="''"
+        [type]="'text'"
+        [placeholder]="'Enter your gender (Male or Female)'"
+      ></app-input>
+      }
+      <app-input
+        [value]="''"
+        [type]="'password'"
+        [placeholder]="'Enter your password'"
+      ></app-input>
+    </div>
+
+    <label class="login__sign"
+      >{{ viewModel.labelSignInUp }}
+      <span class="login__login" (click)="onClickLinkHandle()">{{
+        viewModel.labelLink
+      }}</span></label
+    >
+    }
+    <label class="login__name">{{ viewModel.name }}</label>
+    <label class="login__email">{{ viewModel.email }}</label>
+    <label class="login__gender">{{ viewModel.gender }}</label>
+  </div>
+  <div class="login__footer">
+    <div class="login__button" (click)="onSubmit()">{{ viewModel.button }}</div>
+  </div>
+</div>

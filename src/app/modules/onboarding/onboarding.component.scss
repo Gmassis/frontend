@@ -1,0 +1,44 @@
+@import "index.scss";
+
+.onboarding {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 32px;
+  height: 100vh;
+  background: linear-gradient(to top, #bab63b, rgba(186, 182, 59, 0)),
+    $onboarding-img center center / cover no-repeat;
+
+  &__title,
+  &__subtitle {
+    color: #fff;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  &__subtitle {
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    height: 46px;
+    width: 220px;
+    border-radius: 10px;
+    font-weight: 500;
+    color: #87842d;
+    margin-bottom: 40px;
+    font-size: 18px;
+    text-align: center;
+  }
+}

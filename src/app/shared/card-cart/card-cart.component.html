@@ -1,0 +1,22 @@
+<div class="card-cart">
+  <div
+    class="card-cart__image"
+    [style.background-color]="viewModel.backgroud"
+    [style.background-image]="viewModel.image"
+  ></div>
+  <div class="card-cart__container-body">
+    <label class="card-cart__name" [style.color]="viewModel.color">{{
+      viewModel.name
+    }}</label>
+    <label class="card-cart__type">{{ viewModel.type }}</label>
+    <label class="card-cart__price">{{ viewModel.price }}</label>
+    <div class="card-cart__quantity">
+      <div class="card-cart__more" (click)="onClickMoreHandle()">+</div>
+      <div class="card-cart__quantity-value">
+        <label>{{ viewModel.quantity }}</label>
+      </div>
+      <div class="card-cart__less" (click)="onClickLessHandle()">-</div>
+      <div class="card-cart__measurement">{{ viewModel.measurement_unit }}</div>
+    </div>
+  </div>
+</div>

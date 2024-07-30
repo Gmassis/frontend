@@ -1,0 +1,89 @@
+@import "index.scss";
+
+.login {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 12px 12px;
+  }
+
+  &__container-title {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon-arrow {
+    width: 16px;
+    height: 16px;
+    background: $icon-arrow center center / cover no-repeat;
+  }
+
+  &__title {
+    margin-left: 12px;
+    color: #747474;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12px;
+  }
+
+  &__image {
+    width: 250px;
+    height: 250px;
+    background: $login-img center center / cover no-repeat;
+    margin-bottom: 16px;
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__sign {
+    color: #747474;
+  }
+
+  &__login {
+    color: rgb(0, 123, 255);
+    text-decoration: underline;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #bab63b;
+    border-top-right-radius: 19px;
+    border-top-left-radius: 19px;
+    padding: 0 12px;
+  }
+
+  &__button {
+    width: 250px;
+    text-align: center;
+    background-color: #fff;
+    color: #837e1c;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+
+  &__name,
+  &__email,
+  &__gender {
+    color: #747474;
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+}

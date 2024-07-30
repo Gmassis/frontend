@@ -1,0 +1,21 @@
+<div [ngClass]="buildNgClass()" [style.background-color]="viewModel.backgroud">
+  <div class="card-product__image-container">
+    <div
+      class="card-product__image"
+      [style.background-image]="viewModel.image"
+    ></div>
+  </div>
+  <div class="card-product__text-container">
+    <label class="card-product__name" [style.color]="viewModel.color">{{
+      viewModel.name
+    }}</label>
+    <label class="card-product__type">{{ viewModel.type }}</label>
+  </div>
+  <div class="card-product__footer">
+    <label class="card-product__price">{{ viewModel.price }}</label>
+  </div>
+
+  <div class="card-product__add" (click)="onClickAddHandle()">
+    <div class="card-product__add-icon">+</div>
+  </div>
+</div>

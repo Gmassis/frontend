@@ -1,0 +1,86 @@
+.card-cart {
+  display: flex;
+  padding-bottom: 16px;
+
+  &__image {
+    height: 120px;
+    min-width: 120px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+  }
+
+  &__container-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    padding-left: 24px;
+  }
+
+  &__name {
+    font-size: 24px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__type {
+    font-size: 14px;
+    font-weight: 400;
+    color: #989898;
+    margin-bottom: 8px;
+  }
+
+  &__price {
+    font-size: 18px;
+    color: #4b4b4b;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  &__quantity {
+    display: flex;
+    align-items: center;
+  }
+
+  &__more,
+  &__less {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 30px;
+    font-size: 20px;
+    box-shadow: 0 0 10px 1px rgba(169, 169, 169, 0.2);
+  }
+
+  &__more {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  &__less {
+    padding-bottom: 4px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  &__quantity-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 46px;
+    text-align: center;
+    background-color: #f8f8eb;
+    font-size: 14px;
+  }
+
+  &__measurement {
+    font-size: 14px;
+    margin-left: 12px;
+    color: #989898;
+  }
+}

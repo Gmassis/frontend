@@ -1,0 +1,43 @@
+<div class="home">
+  <div class="home__header">
+    <div class="home__container">
+      <div class="home__cart" (click)="onClickCartHandle()">
+        <div class="home__cart-icon"></div>
+        <div class="home__cart-badge">
+          <label class="home__cart-badge-number">{{ viewModel.badge }}</label>
+        </div>
+      </div>
+      <app-card-profile
+        [profile]="viewModel.profile"
+        (outputProfile)="onClickProfileHandle()"
+      ></app-card-profile>
+    </div>
+    <app-input
+      [value]="viewModel.valueSearch"
+      (valueOut)="onSearchHandle($event)"
+    ></app-input>
+  </div>
+  <div class="home__body-carousel-category">
+    <app-carousel>
+      <li *ngFor="let category of viewModel.categories; trackBy: trackByFn">
+        <app-card-category
+          [inputModel]="category"
+          (outputClick)="onCardClickHandle($event)"
+        ></app-card-category>
+      </li>
+    </app-carousel>
+  </div>
+  <div class="home__body">
+    <h1 class="home__body-title">{{ viewModel.title }}</h1>
+
+    <div class="home__body-products">
+      <li *ngFor="let product of viewModel.products">
+        <app-card-product
+          class="home__body-product"
+          [inputModel]="product"
+          (outputClick)="onClickAddHandle($event)"
+        ></app-card-product>
+      </li>
+    </div>
+  </div>
+</div>

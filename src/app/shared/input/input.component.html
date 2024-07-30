@@ -1,0 +1,13 @@
+<div [ngClass]="buildNgClass()">
+  <div class="input__container-button">
+    <div class="input__button-input" role="button"></div>
+  </div>
+  <input
+    #inputSearch
+    [type]="type()"
+    class="input__input"
+    [placeholder]="placeholder()"
+    [(ngModel)]="valueInput"
+    (ngModelChange)="emitValue()"
+  />
+</div>

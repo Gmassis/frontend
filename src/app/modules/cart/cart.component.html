@@ -1,0 +1,31 @@
+<div class="cart">
+  <div class="cart__header">
+    <div class="cart__container-title">
+      <div class="cart__icon-arrow" (click)="onClickBack()"></div>
+      <label class="cart__title">{{ viewModel.title }}</label>
+    </div>
+    <app-card-profile
+      [profile]="viewModel.profile"
+      (outputProfile)="onClickProfileHandle()"
+    ></app-card-profile>
+  </div>
+
+  <div class="cart__body">
+    <li *ngFor="let product of viewModel.products">
+      <app-card-cart
+        [inputModel]="product"
+        (outputMoreClick)="onClickMoreHandle($event)"
+        (outputLessClick)="onClickLessHandle($event)"
+      ></app-card-cart>
+    </li>
+  </div>
+  <div class="cart__footer">
+    <div class="cart__container-price">
+      <label class="cart__total">{{ viewModel.total }}</label>
+      <label class="cart__price">{{ viewModel.price }}</label>
+    </div>
+    <div class="cart__button" (click)="onClickPayHandle()">
+      {{ viewModel.button }}
+    </div>
+  </div>
+</div>
