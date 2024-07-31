@@ -41,6 +41,8 @@ export class LoginComponent implements OnInit {
       this.state.sessao.delete(StateConstants.CART);
       this.state.sessao.delete(StateConstants.ORIGE_ROUTE);
       this.state.sessao.delete(StateConstants.USER);
+      sessionStorage.removeItem(StateConstants.CHECKOUT);
+      sessionStorage.removeItem(StateConstants.USER);
       this.buildViewModelSignIn();
       return;
     }
